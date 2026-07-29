@@ -36,7 +36,7 @@ export function GigGallery({
   if (total === 0) {
     return (
       <div className="relative aspect-[16/9] rounded-2xl overflow-hidden bg-canvas-subtle border border-line flex items-center justify-center text-ink-faint text-5xl font-semibold tracking-tight">
-        Worklane
+        Brellis
       </div>
     );
   }

@@ -23,7 +23,7 @@ const wrapper = (heading: string, body: string) => `
     <div style="background:#fff;padding:32px;border-radius:0 0 12px 12px;border:1px solid #E5E7EB;border-top:none;">
       ${body}
     </div>
-    <p style="text-align:center;color:#6B7280;font-size:12px;margin-top:24px;">© ${new Date().getFullYear()} Worklane</p>
+    <p style="text-align:center;color:#6B7280;font-size:12px;margin-top:24px;">© ${new Date().getFullYear()} Brellis</p>
   </div>
 </body></html>`;
 
@@ -38,11 +38,11 @@ const detailBlock = (rows: string) =>
 
 export const templates: Record<EmailTemplate, (data: Record<string, string | number>) => string> = {
   welcome: (d) =>
-    wrapper("Welcome to Worklane! 👋", `
+    wrapper("Welcome to Brellis! 👋", `
       <p>Hi ${d.userName},</p>
-      <p>Welcome to Worklane — the marketplace where you can find skilled freelancers or start selling your own services.</p>
+      <p>Welcome to Brellis — the marketplace where you can find skilled freelancers or start selling your own services.</p>
       <p>Get started by browsing services or activating your seller profile.</p>
-      ${btn(String(d.appUrl), "Explore Worklane")}
+      ${btn(String(d.appUrl), "Explore Brellis")}
     `),
 
   order_placed_buyer: (d) =>
@@ -89,7 +89,7 @@ export const templates: Record<EmailTemplate, (data: Record<string, string | num
   gig_approved: (d) =>
     wrapper("Your Gig Is Live! 🎉", `
       <p>Hi ${d.sellerName},</p>
-      <p>Your gig <strong>${d.gigTitle}</strong> has been approved and is now live on Worklane.</p>
+      <p>Your gig <strong>${d.gigTitle}</strong> has been approved and is now live on Brellis.</p>
       ${btn(String(d.gigUrl), "View Your Gig", "#0D9488")}
     `),
 

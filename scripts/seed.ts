@@ -2,7 +2,7 @@
  * Seed script — run once with `npm run seed` after running supabase/schema.sql.
  *
  * Creates:
- *   - 1 admin user        (admin@worklane.test)
+ *   - 1 admin user        (admin@brellis.test)
  *   - 5 seller users with profiles
  *   - 1 buyer user
  *   - 10 sample gigs with 3 packages each
@@ -33,35 +33,35 @@ const PASSWORD = "Test1234!";
 // public/avatars/ and served as static assets from the same origin.
 const SELLERS = [
   {
-    email: "ahmad@worklane.test", username: "ahmaddev", full_name: "Ahmad Raza",
+    email: "ahmad@brellis.test", username: "ahmaddev", full_name: "Ahmad Raza",
     avatar_url: "/avatars/ahmad.png",
     tagline: "Full-Stack Web & Mobile Developer | 5+ Years Experience",
     skills: ["React", "Node.js", "Bubble.io", "Next.js", "React Native"],
     seller_level: "top_rated", total_orders_completed: 147, average_rating: 4.9, total_earnings_lifetime: 23400.0,
   },
   {
-    email: "sara@worklane.test", username: "saradesigns", full_name: "Sara Khan",
+    email: "sara@brellis.test", username: "saradesigns", full_name: "Sara Khan",
     avatar_url: "/avatars/sara.jpeg",
     tagline: "UI/UX Designer & Brand Identity Specialist",
     skills: ["Figma", "Adobe XD", "Illustrator", "Brand Design"],
     seller_level: "level_two", total_orders_completed: 89, average_rating: 4.8, total_earnings_lifetime: 8900.0,
   },
   {
-    email: "noor@worklane.test", username: "nocodenoor", full_name: "Noor Fatima",
+    email: "noor@brellis.test", username: "nocodenoor", full_name: "Noor Fatima",
     avatar_url: "/avatars/noor.png",
     tagline: "Bubble.io & Webflow Expert | MVP Builder",
     skills: ["Bubble.io", "Webflow", "No-Code", "Airtable", "Zapier"],
     seller_level: "level_one", total_orders_completed: 34, average_rating: 4.7, total_earnings_lifetime: 3200.0,
   },
   {
-    email: "ali@worklane.test", username: "aibuilder_ali", full_name: "Ali Hassan",
+    email: "ali@brellis.test", username: "aibuilder_ali", full_name: "Ali Hassan",
     avatar_url: "/avatars/ali.png",
     tagline: "AI Integration & Automation Specialist",
     skills: ["OpenAI API", "Python", "n8n", "Make.com", "ChatGPT"],
     seller_level: "level_one", total_orders_completed: 28, average_rating: 4.6, total_earnings_lifetime: 2800.0,
   },
   {
-    email: "usman@worklane.test", username: "mobilemaster_usman", full_name: "Usman Malik",
+    email: "usman@brellis.test", username: "mobilemaster_usman", full_name: "Usman Malik",
     avatar_url: "/avatars/usman.png",
     tagline: "React Native & Flutter Developer | 100+ Apps Built",
     skills: ["React Native", "Flutter", "Firebase", "iOS", "Android"],
@@ -99,10 +99,10 @@ const GIGS = [
 ];
 
 async function main() {
-  console.log("🌱 Seeding Worklane...");
+  console.log("🌱 Seeding Brellis...");
 
   // Admin
-  const adminEmail = "admin@worklane.test";
+  const adminEmail = "admin@brellis.test";
   console.log("Creating admin:", adminEmail);
   const { data: adminAuth, error: adminErr } = await sb.auth.admin.createUser({
     email: adminEmail,
@@ -173,7 +173,7 @@ async function main() {
   // Buyer
   console.log("Creating buyer");
   const { data: buyerAuth } = await sb.auth.admin.createUser({
-    email: "buyer@worklane.test",
+    email: "buyer@brellis.test",
     password: PASSWORD,
     email_confirm: true,
     user_metadata: { full_name: "Demo Buyer", username: "demo_buyer" },
@@ -181,7 +181,7 @@ async function main() {
   if (buyerAuth?.user) {
     await sb.from("users").upsert({
       id: buyerAuth.user.id,
-      email: "buyer@worklane.test",
+      email: "buyer@brellis.test",
       full_name: "Demo Buyer",
       username: "demo_buyer",
       avatar_url: "/avatars/buyer.png",
@@ -240,9 +240,9 @@ async function main() {
 
   console.log("\n✅ Seed complete!");
   console.log("Test accounts (password: Test1234!):");
-  console.log("  admin@worklane.test");
-  console.log("  ahmad@worklane.test");
-  console.log("  buyer@worklane.test");
+  console.log("  admin@brellis.test");
+  console.log("  ahmad@brellis.test");
+  console.log("  buyer@brellis.test");
 }
 
 main().catch((e) => {

@@ -6,6 +6,8 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
 import { Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
+import { DemoCredentialField } from "@/components/auth/demo-credentials";
+import type { DemoAccount } from "@/lib/demo-credentials";
 
 function LoginForm() {
   const router = useRouter();
@@ -15,6 +17,12 @@ function LoginForm() {
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const fillDemo = (account: DemoAccount) => {
+    setEmail(account.email);
+    setPassword(account.password);
+    setError(null);
+  };
 
   async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -35,14 +43,16 @@ function LoginForm() {
     <form onSubmit={onSubmit} className="space-y-4">
       <div>
         <label className="block text-sm font-medium text-ink mb-1.5">Email</label>
-        <Input
-          type="email"
-          required
-          autoComplete="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="you@example.com"
-        />
+        <DemoCredentialField onFill={fillDemo}>
+          <Input
+            type="email"
+            required
+            autoComplete="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="you@example.com"
+          />
+        </DemoCredentialField>
       </div>
       <div>
         <div className="flex items-baseline justify-between mb-1.5">
@@ -51,13 +61,15 @@ function LoginForm() {
             Forgot?
           </Link>
         </div>
-        <Input
-          type="password"
-          required
-          autoComplete="current-password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+        <DemoCredentialField onFill={fillDemo}>
+          <Input
+            type="password"
+            required
+            autoComplete="current-password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+        </DemoCredentialField>
       </div>
       {error && (
         <p className="text-sm text-error bg-error/5 border border-error/20 rounded-md px-3 py-2">{error}</p>
@@ -80,12 +92,12 @@ export default function LoginPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl font-semibold text-brand-primary tracking-tight">
-            Worklane
+            Brellis
           </Link>
         </div>
         <div className="bg-white p-7 sm:p-8 rounded-2xl border border-line shadow-card">
           <h1 className="font-heading text-2xl text-ink text-center mb-1.5">Welcome back</h1>
-          <p className="text-sm text-ink-subtle text-center mb-6">Sign in to your Worklane account.</p>
+          <p className="text-sm text-ink-subtle text-center mb-6">Sign in to your Brellis account.</p>
           <Suspense fallback={<Loader2 className="w-6 h-6 animate-spin mx-auto text-ink-faint" />}>
             <LoginForm />
           </Suspense>

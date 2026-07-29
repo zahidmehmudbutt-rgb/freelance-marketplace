@@ -96,7 +96,7 @@ export function GigCard({
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center text-ink-faint text-2xl font-semibold tracking-tight">
-            Worklane
+            Brellis
           </div>
         )}
         <button

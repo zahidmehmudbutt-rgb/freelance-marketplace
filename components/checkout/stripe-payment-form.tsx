@@ -97,7 +97,7 @@ function InnerForm({ orderId, totalCents }: { orderId: string; totalCents: numbe
       <div className="flex items-start gap-2 mt-5 text-xs text-ink-subtle">
         <ShieldCheck className="w-4 h-4 shrink-0 text-brand-primary-dark mt-0.5" />
         <p>
-          Your payment is held in escrow by Worklane until you approve the delivery.
+          Your payment is held in escrow by Brellis until you approve the delivery.
           We never store your card details — Stripe handles all sensitive data.
         </p>
       </div>

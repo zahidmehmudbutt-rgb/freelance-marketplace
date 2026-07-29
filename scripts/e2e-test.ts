@@ -16,7 +16,7 @@ async function main() {
   console.log("🧪 E2E test starting...");
 
   // 1. Find a buyer and a gig
-  const { data: buyer } = await admin.from("users").select("*").eq("email", "buyer@worklane.test").single();
+  const { data: buyer } = await admin.from("users").select("*").eq("email", "buyer@brellis.test").single();
   const { data: gig } = await admin.from("gigs").select("*").eq("status", "active").limit(1).single();
   if (!buyer || !gig) {
     console.error("Missing buyer or gig. Run npm run seed first.");

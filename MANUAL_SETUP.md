@@ -1,4 +1,4 @@
-# Worklane — Manual Setup Steps
+# Brellis — Manual Setup Steps
 
 The code is complete. You now need to wire up the external services. **Total time: ~20 minutes.**
 
@@ -66,7 +66,7 @@ STRIPE_SECRET_KEY=sk_test_...
 STRIPE_WEBHOOK_SECRET=whsec_...
 
 NEXT_PUBLIC_APP_URL=http://localhost:3000
-ADMIN_EMAILS=admin@worklane.test
+ADMIN_EMAILS=admin@brellis.test
 CRON_SECRET=any-long-random-string-here
 ```
 
@@ -81,9 +81,9 @@ npm run seed
 ```
 
 This creates:
-- `admin@worklane.test` — full admin access
+- `admin@brellis.test` — full admin access
 - 5 demo sellers with realistic profiles
-- 1 buyer (`buyer@worklane.test`)
+- 1 buyer (`buyer@brellis.test`)
 - 10 gigs across categories
 
 Password for all: `Test1234!`
@@ -102,23 +102,23 @@ Open [http://localhost:3000](http://localhost:3000)
 
 ### Quick test path:
 1. Browse the landing page — fee transparency, categories, gigs
-2. Sign in as `buyer@worklane.test` → browse gigs → place an order
+2. Sign in as `buyer@brellis.test` → browse gigs → place an order
 3. Use Stripe test card `4242 4242 4242 4242`, any future expiry, any CVC
-4. Sign in as `ahmad@worklane.test` (seller) → see the order in seller dashboard → deliver it
+4. Sign in as `ahmad@brellis.test` (seller) → see the order in seller dashboard → deliver it
 5. Switch back to buyer → accept delivery → leave review + tip
-6. Sign in as `admin@worklane.test` → check `/admin/emails` to see all the system emails
+6. Sign in as `admin@brellis.test` → check `/admin/emails` to see all the system emails
 
 ---
 
 ## 6. Deploy to Vercel (3 min — already mostly done)
 
 ### 6a. GitHub repo — already pushed
-✅ Code is live at https://github.com/khuzaimabutt/Worklane (public)
+✅ Code is live at https://github.com/khuzaimabutt/Brellis (public)
 
 ### 6b. Import on Vercel (3 min, all browser)
 
 1. Go to **https://vercel.com/new** (sign in with GitHub if not already)
-2. Click **Import** next to **khuzaimabutt/Worklane**
+2. Click **Import** next to **khuzaimabutt/Brellis**
 3. Framework Preset: **Next.js** (auto-detected) — leave all defaults
 4. Expand **Environment Variables** and **copy/paste them from your local `.env.local` file**. The keys you need to add (values are in `.env.local` — don't commit them):
 
@@ -129,14 +129,14 @@ Open [http://localhost:3000](http://localhost:3000)
    - `STRIPE_SECRET_KEY` (placeholder OK)
    - `STRIPE_WEBHOOK_SECRET` (placeholder OK)
    - `NEXT_PUBLIC_APP_URL` — set to your Vercel URL (you'll update after first deploy)
-   - `ADMIN_EMAILS` — `admin@worklane.test`
+   - `ADMIN_EMAILS` — `admin@brellis.test`
    - `CRON_SECRET` — generate a long random string (any value)
 
 5. Click **Deploy** — build takes ~3 minutes
-6. Once it shows "Your project has been deployed", copy your Vercel URL (e.g. `https://worklane-xxxx.vercel.app`)
+6. Once it shows "Your project has been deployed", copy your Vercel URL (e.g. `https://brellis-xxxx.vercel.app`)
 7. Go to **Settings → Environment Variables** → edit `NEXT_PUBLIC_APP_URL` to your real Vercel URL → click **Redeploy**
 
-⚠️ If your domain ends up different from `worklane.vercel.app`, step 7 ensures emails contain the right links.
+⚠️ If your domain ends up different from `brellis.vercel.app`, step 7 ensures emails contain the right links.
 
 ### 6c. Cron jobs
 `vercel.json` is in the repo — Vercel will discover the 4 cron jobs automatically:
@@ -182,11 +182,11 @@ Run `supabase/schema.sql` first in the Supabase SQL Editor.
 
 **Can't log in**
 - Check Supabase → Authentication → Users — does the user exist?
-- Check Supabase → SQL Editor: `select * from public.users where email = 'buyer@worklane.test'` — does the row exist?
+- Check Supabase → SQL Editor: `select * from public.users where email = 'buyer@brellis.test'` — does the row exist?
 - If the auth user exists but `public.users` row doesn't, the trigger didn't fire. Re-run `supabase/schema.sql`.
 
 **Admin pages return 404**
-Check `select is_admin from users where email = 'admin@worklane.test'`. Should be `true`. If not: `UPDATE users SET is_admin = true WHERE email = 'admin@worklane.test';`
+Check `select is_admin from users where email = 'admin@brellis.test'`. Should be `true`. If not: `UPDATE users SET is_admin = true WHERE email = 'admin@brellis.test';`
 
 **TypeScript errors after editing**
 Run `npm run build` — they'll show. The schema's TypeScript types are hand-written in `types/database.types.ts`; if you add fields to a table in Supabase, update them here too (or run `npx supabase gen types typescript --linked > types/database.types.ts` after linking the project).

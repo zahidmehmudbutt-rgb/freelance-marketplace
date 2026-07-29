@@ -1,5 +1,5 @@
 -- =====================================================
--- Worklane — Complete Schema
+-- Brellis — Complete Schema
 -- Run this in Supabase SQL Editor (Project → SQL → New Query)
 -- =====================================================
 

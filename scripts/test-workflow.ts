@@ -15,7 +15,7 @@ const admin = createClient(URL, SERVICE, { auth: { autoRefreshToken: false, pers
 async function main() {
   console.log("🧪 transitionOrder workflow test starting...");
 
-  const { data: buyer } = await admin.from("users").select("*").eq("email", "buyer@worklane.test").single();
+  const { data: buyer } = await admin.from("users").select("*").eq("email", "buyer@brellis.test").single();
   const { data: gig } = await admin.from("gigs").select("*").eq("status", "active").limit(1).single();
   const { data: pkg } = await admin.from("gig_packages").select("*").eq("gig_id", gig!.id).eq("package_type", "basic").single();
 

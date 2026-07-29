@@ -1,4 +1,4 @@
-# Worklane — Freelance Services Marketplace
+# Brellis — Freelance Services Marketplace
 
 A production-grade freelance marketplace portfolio project. Browse services, place orders, message sellers, leave reviews, withdraw earnings — all running on a free-tier stack with no real charges.
 
@@ -56,9 +56,9 @@ npm run dev
 
 | Role | Email | Password |
 |---|---|---|
-| Admin | `admin@worklane.test` | `Test1234!` |
-| Seller | `ahmad@worklane.test` | `Test1234!` |
-| Buyer | `buyer@worklane.test` | `Test1234!` |
+| Admin | `admin@brellis.test` | `Test1234!` |
+| Seller | `ahmad@brellis.test` | `Test1234!` |
+| Buyer | `buyer@brellis.test` | `Test1234!` |
 
 Test card: `4242 4242 4242 4242`, any future expiry, any CVC.
 

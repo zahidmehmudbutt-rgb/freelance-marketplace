@@ -30,7 +30,7 @@ export default function ForgotPasswordPage() {
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
           <Link href="/" className="text-2xl font-semibold text-brand-primary tracking-tight">
-            Worklane
+            Brellis
           </Link>
         </div>
         <div className="bg-white p-7 sm:p-8 rounded-2xl border border-line shadow-card">
