@@ -336,7 +336,7 @@ function DemoCardForm({
       <div className="flex items-start gap-2 mt-5 text-xs text-ink-subtle">
         <ShieldCheck className="w-4 h-4 shrink-0 text-brand-primary-dark mt-0.5" />
         <p>
-          Your payment is held in escrow by Brellis until you approve the delivery.
+          Your payment is held in escrow by Freelance Marketplace until you approve the delivery.
           Card details are not saved.
         </p>
       </div>

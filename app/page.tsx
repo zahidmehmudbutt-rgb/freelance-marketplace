@@ -259,7 +259,7 @@ export default async function HomePage() {
             </div>
             <p className="text-xs text-ink-subtle text-center mt-6 max-w-2xl mx-auto leading-relaxed">
               The 20% seller commission funds platform security, payment protection, dispute resolution,
-              and the team behind Brellis.
+              and the team behind Freelance Marketplace.
             </p>
           </div>
         </section>
@@ -309,7 +309,7 @@ export default async function HomePage() {
                   Turn your skills into income.
                 </h2>
                 <p className="text-white/80 text-base sm:text-lg mb-7 max-w-xl mx-auto text-balance">
-                  Join thousands of professionals earning on Brellis — no upfront cost, no monthly fees.
+                  Join thousands of professionals earning on Freelance Marketplace — no upfront cost, no monthly fees.
                 </p>
                 <Link
                   href="/become-seller"

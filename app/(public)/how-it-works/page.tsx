@@ -4,8 +4,8 @@ import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 
 export const metadata = {
-  title: "How it works — Brellis",
-  description: "From finding the right freelancer to releasing payment — see exactly how Brellis works for buyers and sellers.",
+  title: "How it works — Freelance Marketplace",
+  description: "From finding the right freelancer to releasing payment — see exactly how Freelance Marketplace works for buyers and sellers.",
 };
 
 export default function HowItWorksPage() {
@@ -20,7 +20,7 @@ export default function HowItWorksPage() {
               Hire confidently. Get paid securely.
             </h1>
             <p className="text-lg text-ink-muted leading-relaxed text-balance">
-              Whether you&apos;re buying a service or selling one, Brellis is built around a simple promise:
+              Whether you&apos;re buying a service or selling one, Freelance Marketplace is built around a simple promise:
               clear pricing, escrowed payments, and verified reviews.
             </p>
           </div>
@@ -33,7 +33,7 @@ export default function HowItWorksPage() {
             <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               <Step n={1} icon={<Search className="w-5 h-5" />} title="Find a service" body="Browse categories or search by keyword. Every gig shows a fixed starting price, delivery time, and reviews up front." />
               <Step n={2} icon={<MessageCircle className="w-5 h-5" />} title="Message or order" body="Ask the seller a question, request a custom offer, or order a package directly. No back-and-forth required to get a quote." />
-              <Step n={3} icon={<ShieldCheck className="w-5 h-5" />} title="Pay into escrow" body="Your payment is held safely by Brellis — the seller is only paid when you approve the delivery." />
+              <Step n={3} icon={<ShieldCheck className="w-5 h-5" />} title="Pay into escrow" body="Your payment is held safely by Freelance Marketplace — the seller is only paid when you approve the delivery." />
               <Step n={4} icon={<CheckCircle2 className="w-5 h-5" />} title="Review and release" body="Approve the work or request a revision. Once you approve, funds release automatically and you can leave a review." />
             </ol>
           </div>
@@ -46,7 +46,7 @@ export default function HowItWorksPage() {
             <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
               <Step n={1} icon={<Star className="w-5 h-5" />} title="Create a profile" body="Add your tagline, skills, languages, and a portfolio. Profiles are public — link to them from your own site." />
               <Step n={2} icon={<CheckCircle2 className="w-5 h-5" />} title="Publish a gig" body="Define three package tiers (Basic / Standard / Premium), delivery times, and revision policy. Submit for review." />
-              <Step n={3} icon={<MessageCircle className="w-5 h-5" />} title="Deliver the work" body="Communicate inside Brellis so the order timeline, files, and revisions stay in one place." />
+              <Step n={3} icon={<MessageCircle className="w-5 h-5" />} title="Deliver the work" body="Communicate inside Freelance Marketplace so the order timeline, files, and revisions stay in one place." />
               <Step n={4} icon={<Wallet className="w-5 h-5" />} title="Get paid" body="When the buyer approves, your earnings appear in your balance. Withdraw to your bank anytime." />
             </ol>
           </div>
@@ -55,7 +55,7 @@ export default function HowItWorksPage() {
         <section className="py-16 sm:py-20 border-b border-line">
           <div className="max-w-5xl mx-auto px-4 sm:px-6">
             <div className="grid md:grid-cols-3 gap-5">
-              <Promise title="Escrow protection" body="Funds are held by Brellis until you approve the delivery. Disputed orders go to mediation, never the seller's wallet by default." />
+              <Promise title="Escrow protection" body="Funds are held by Freelance Marketplace until you approve the delivery. Disputed orders go to mediation, never the seller's wallet by default." />
               <Promise title="Transparent fees" body="Buyer service fee is 5.5%, shown before checkout. Seller commission is 20%. No hidden charges, no surprise add-ons." />
               <Promise title="Verified reviews" body="Reviews can only be left by buyers who actually completed an order. No drive-by ratings, no purchased reviews." />
             </div>

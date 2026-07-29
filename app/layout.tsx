@@ -6,7 +6,7 @@ import { createClient } from "@/lib/supabase/server";
 import type { User } from "@/types/database.types";
 
 export const metadata: Metadata = {
-  title: "Brellis — Find the Right Freelancer. Get It Done.",
+  title: "Freelance Marketplace — Find the Right Freelancer. Get It Done.",
   description: "Browse services from verified professionals. Quality work, transparent pricing, secure payments.",
 };
 

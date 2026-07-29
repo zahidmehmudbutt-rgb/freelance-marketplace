@@ -99,7 +99,7 @@ const GIGS = [
 ];
 
 async function main() {
-  console.log("🌱 Seeding Brellis...");
+  console.log("🌱 Seeding Freelance Marketplace...");
 
   // Admin
   const adminEmail = "admin@brellis.test";

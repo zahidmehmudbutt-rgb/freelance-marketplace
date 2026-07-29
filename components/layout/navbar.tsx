@@ -84,7 +84,7 @@ export function Navbar() {
           href="/"
           className="text-xl font-semibold text-brand-primary tracking-tight whitespace-nowrap shrink-0 hover:text-brand-primary-dark transition-colors"
         >
-          Brellis
+          Freelance Marketplace
         </Link>
 
         <div className="hidden md:block flex-1 min-w-0 max-w-xl">
@@ -201,7 +201,7 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="p-0 flex flex-col">
               <div className="px-5 h-16 flex items-center border-b border-line">
-                <span className="text-xl font-semibold text-brand-primary tracking-tight">Brellis</span>
+                <span className="text-xl font-semibold text-brand-primary tracking-tight">Freelance Marketplace</span>
               </div>
 
               <div className="p-5 border-b border-line">

@@ -1,4 +1,4 @@
-# Brellis — Manual Setup Steps
+# Freelance Marketplace — Manual Setup Steps
 
 The code is complete. You now need to wire up the external services. **Total time: ~20 minutes.**
 
@@ -113,12 +113,12 @@ Open [http://localhost:3000](http://localhost:3000)
 ## 6. Deploy to Vercel (3 min — already mostly done)
 
 ### 6a. GitHub repo — already pushed
-✅ Code is live at https://github.com/khuzaimabutt/Brellis (public)
+✅ Code is live at https://github.com/zahidmehmudbutt-rgb/freelance-marketplace (public)
 
 ### 6b. Import on Vercel (3 min, all browser)
 
 1. Go to **https://vercel.com/new** (sign in with GitHub if not already)
-2. Click **Import** next to **khuzaimabutt/Brellis**
+2. Click **Import** next to **zahidmehmudbutt-rgb/freelance-marketplace**
 3. Framework Preset: **Next.js** (auto-detected) — leave all defaults
 4. Expand **Environment Variables** and **copy/paste them from your local `.env.local` file**. The keys you need to add (values are in `.env.local` — don't commit them):
 

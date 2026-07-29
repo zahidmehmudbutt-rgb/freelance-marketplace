@@ -29,9 +29,9 @@ export function Footer() {
       </div>
       <div className="border-t border-line">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex items-center justify-between gap-3 flex-wrap text-xs text-ink-subtle">
-          <p>© {new Date().getFullYear()} Brellis. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Freelance Marketplace. All rights reserved.</p>
           <Link href="/" className="text-base font-semibold text-brand-primary tracking-tight">
-            Brellis
+            Freelance Marketplace
           </Link>
         </div>
       </div>
