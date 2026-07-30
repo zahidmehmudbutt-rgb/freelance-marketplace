@@ -29,11 +29,11 @@ if (!SUPABASE_URL || !SERVICE_ROLE || SUPABASE_URL.includes("placeholder")) {
 const sb = createClient(SUPABASE_URL, SERVICE_ROLE, { auth: { autoRefreshToken: false, persistSession: false } });
 
 const AVATARS: Array<{ email: string; avatar_url: string }> = [
-  { email: "ahmad@brellis.test", avatar_url: "/avatars/ahmad.png" },
-  { email: "sara@brellis.test", avatar_url: "/avatars/sara.jpeg" },
-  { email: "noor@brellis.test", avatar_url: "/avatars/noor.png" },
-  { email: "ali@brellis.test", avatar_url: "/avatars/ali.png" },
-  { email: "usman@brellis.test", avatar_url: "/avatars/usman.png" },
+  { email: "liam@brellis.test", avatar_url: "/avatars/liam.png" },
+  { email: "chloe@brellis.test", avatar_url: "/avatars/chloe.jpeg" },
+  { email: "mia@brellis.test", avatar_url: "/avatars/mia.png" },
+  { email: "ethan@brellis.test", avatar_url: "/avatars/ethan.png" },
+  { email: "jack@brellis.test", avatar_url: "/avatars/jack.png" },
   { email: "buyer@brellis.test", avatar_url: "/avatars/buyer.png" },
 ];
 

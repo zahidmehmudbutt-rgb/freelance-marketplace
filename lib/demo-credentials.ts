@@ -24,7 +24,7 @@ export const DEMO_ACCOUNTS: DemoAccount[] = [
   },
   {
     role: "Seller",
-    email: "ahmad@brellis.test",
+    email: "liam@brellis.test",
     password: DEMO_PASSWORD,
     blurb: "Manage gigs, orders, and earnings",
   },

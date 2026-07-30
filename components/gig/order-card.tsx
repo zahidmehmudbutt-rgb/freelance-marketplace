@@ -42,7 +42,10 @@ export function OrderCard({
               aria-selected={active}
               onClick={() => setPkgType(p.package_type)}
               className={cn(
-                "relative flex-1 h-12 text-sm font-medium capitalize transition-colors",
+                // Label sits on its own baseline at the bottom so the badge above
+                // it never overlaps, and the badge stays inside the button — the
+                // card's overflow-hidden would clip anything with a negative offset.
+                "relative flex-1 h-14 flex items-end justify-center pb-3 text-sm font-medium capitalize transition-colors",
                 active
                   ? "bg-white text-ink border-b-2 border-brand-primary -mb-px"
                   : "text-ink-subtle hover:text-ink hover:bg-white/60"
@@ -50,7 +53,7 @@ export function OrderCard({
             >
               {p.package_type}
               {isMid && !active && (
-                <span className="absolute -top-1 right-2 inline-flex items-center gap-0.5 px-1.5 py-0.5 rounded-full bg-brand-accent text-white text-[9px] font-semibold uppercase tracking-wider leading-none">
+                <span className="pointer-events-none absolute top-1.5 left-1/2 -translate-x-1/2 inline-flex items-center px-1.5 py-0.5 rounded-full bg-brand-accent text-white text-[9px] font-semibold uppercase tracking-wider leading-none">
                   Popular
                 </span>
               )}

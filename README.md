@@ -57,7 +57,7 @@ npm run dev
 | Role | Email | Password |
 |---|---|---|
 | Admin | `admin@brellis.test` | `Test1234!` |
-| Seller | `ahmad@brellis.test` | `Test1234!` |
+| Seller | `liam@brellis.test` | `Test1234!` |
 | Buyer | `buyer@brellis.test` | `Test1234!` |
 
 Test card: `4242 4242 4242 4242`, any future expiry, any CVC.
