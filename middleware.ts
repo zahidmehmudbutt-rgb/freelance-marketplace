@@ -1,5 +1,5 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { updateSession } from "@/lib/supabase/middleware";
+import { updateSession } from "./lib/supabase/middleware";
 
 // Note: /seller/[username] is PUBLIC; only /seller/{dashboard,gigs,orders,earnings,analytics,stripe} are protected.
 const AUTH_REQUIRED_EXACT = [
