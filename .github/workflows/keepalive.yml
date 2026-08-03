@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Ping keepalive endpoint
         env:
-          URL: ${{ vars.KEEPALIVE_URL || 'https://worklane-theta.vercel.app/api/cron/keepalive' }}
+          URL: ${{ vars.KEEPALIVE_URL || 'https://freelance-marketplace-phi.vercel.app/api/cron/keepalive' }}
         run: |
           set -euo pipefail
           echo "Hitting $URL"
