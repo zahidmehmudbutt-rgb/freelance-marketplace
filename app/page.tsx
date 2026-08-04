@@ -12,6 +12,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { Navbar } from "@/components/layout/navbar";
+import { DemoBanner } from "@/components/layout/demo-banner";
 import { Footer } from "@/components/layout/footer";
 import { GigCard, GigCardSkeleton, type GigCardData } from "@/components/gig/gig-card";
 import { SellerCard } from "@/components/seller/seller-card";
@@ -134,6 +135,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <DemoBanner />
       <Navbar />
       <main>
         <section className="hero-bg border-b border-line">
