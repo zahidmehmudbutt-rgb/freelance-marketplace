@@ -1,8 +1,18 @@
-# Freelance Marketplace — Freelance Services Marketplace
+# Freelance Marketplace
 
 A production-grade freelance marketplace portfolio project. Browse services, place orders, message sellers, leave reviews, withdraw earnings — all running on a free-tier stack with no real charges.
 
 > **Portfolio mode**: Stripe in **test mode**, **mock** Stripe Connect, **mock** email system that logs to a Supabase table. Functionally complete and visually convincing without real money.
+
+## Live demo
+
+**https://freelance-marketplace-phi.vercel.app**
+
+Buyer, seller, and admin accounts are listed on the sign-in form; picking one fills it in.
+
+![Landing page](docs/screenshots/marketplace-landing.png)
+
+![Seller dashboard](docs/screenshots/marketplace-dashboard.png)
 
 ## Features
 - Full-text search across gigs, category/price/delivery filters
